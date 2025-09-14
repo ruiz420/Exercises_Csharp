@@ -6,7 +6,7 @@ do
 {
     var currentYear = DateTime.Now.Year;
     var message = string.Empty;
-    var Year = ConsoleExtensions.GetInt("ingrese Año ");
+    var Year = ConsoleExtensions.GetInt("ingrese Año: ");
 
     if (Year == currentYear)
     {

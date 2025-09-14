@@ -12,7 +12,7 @@ do
         }
         else
         {
-            Console.WriteLine($"el numero: {number} es impar: ");
+            Console.WriteLine($"el numero: {number} es impar ");
         }
     }
     catch (Exception ex)
@@ -20,7 +20,15 @@ do
         Console.WriteLine(ex.Message);
     }
 
-    Console.WriteLine("Desea Continuar [S/N]? ");
+    Console.WriteLine("Desea Continuar [S/N]?: ");
     response = Console.ReadLine()!.ToUpper();
+    while (response != "S" && response != "N") // Bucle para asegurarse de que la respuesta sea "S" o "N
 
-} while (response == "S");
+    {
+        Console.WriteLine("Por favor ingrese 'S' para continuar o 'N' para salir.");
+        response = Console.ReadLine()!.ToUpper();
+    }
+
+} while (response == "S");  
+
+Console.WriteLine("Game Over");
